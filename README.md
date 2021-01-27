@@ -1,5 +1,5 @@
 # =redirector=
-Simple service for 301/302 redirects 
+Blazing fast 301/302 redirects 
 
 ## :rocket: Features
 * 301/302 redirects @Edge

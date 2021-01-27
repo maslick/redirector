@@ -1,10 +1,18 @@
 'use strict';
 
-const domain = 'https://github.com/maslick';
-
 exports.hello = async (event) => {
-  let request = event.Records[0].cf.request;
-  console.log(JSON.stringify(request, null, 2));
+  let domain = 'https://github.com/maslick';
+  switch (event.Records[0].cf.request['uri']) {
+    case "/cv":
+      domain = "https://www.linkedin.com/in/maslick/"
+      break;
+    case "/qa":
+      domain = "https://stackoverflow.com/users/2996867/maslick"
+      break;
+    case "/ig":
+      domain = "https://www.instagram.com/maslick/";
+      break;
+  }
 
   return {
     status: '301',
