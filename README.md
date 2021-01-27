@@ -13,7 +13,7 @@ sls deploy --verbose
 
 ## :cookie: Usage
 ```
-curl -vsL https://maslick.tech 1> /dev/null
+curl -vs https://maslick.tech 1> /dev/null
 ...
 > GET / HTTP/1.1
 > Host: maslick.tech
