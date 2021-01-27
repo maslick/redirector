@@ -1,0 +1,19 @@
+service: redirector
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-east-1
+
+functions:
+  edger:
+    handler: handler.hello
+    memorySize: 128
+    timeout: 5
+    events:
+      - cloudFront:
+          eventType: viewer-request
+          origin: https://dummy.domain
+          behavior:
+            ViewerProtocolPolicy: redirect-to-https
