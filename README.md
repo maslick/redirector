@@ -6,7 +6,7 @@ Simple service for 301/302 redirects
 * Custom TLS certificate
 * Serverless framework on AWS: CloudFront + Lambda@Edge 
 
-## :bulb: Installation
+## :clapper: Installation
 ```
 sls deploy --verbose
 ```
