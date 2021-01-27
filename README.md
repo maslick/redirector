@@ -1,45 +1,31 @@
 # =redirector=
-Simple service that performs 301/302 redirects using AWS Cloudfront + Lambda@Edge
+Simple service for 301/302 redirects 
 
+## :rocket: Features
+* 301/302 redirects @Edge
+* Custom TLS certificate
+* Serverless framework on AWS: CloudFront + Lambda@Edge 
+
+## :bulb: Installation
 ```
-https://maslick.tech/helloworld?id=123&campaign=456
+sls deploy --verbose
+```
 
-{
-  "clientIp": "46.123.254.35",
-  "headers": {
-    "host": [
-      {
-        "key": "Host",
-        "value": "maslick.tech"
-      }
-    ],
-    "user-agent": [
-      {
-        "key": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36"
-      }
-    ],
-    "accept": [
-      {
-        "key": "Accept",
-        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-      }
-    ],
-    "accept-encoding": [
-      {
-        "key": "Accept-Encoding",
-        "value": "gzip, deflate, br"
-      }
-    ],
-    "accept-language": [
-      {
-        "key": "Accept-Language",
-        "value": "en-GB,en-US;q=0.9,en;q=0.8,ru;q=0.7"
-      }
-    ]
-  },
-  "method": "GET",
-  "querystring": "id=123&campaign=456",
-  "uri": "/helloworld"
-}
+## :cookie: Usage
+```
+curl -vsL https://maslick.tech 1> /dev/null
+...
+> GET / HTTP/1.1
+> Host: maslick.tech
+> User-Agent: curl/7.64.1
+> Accept: */*
+>
+< HTTP/1.1 301 Moved Permanently
+< Content-Length: 0
+< Connection: keep-alive
+< Server: CloudFront
+< Date: Wed, 27 Jan 2021 07:17:06 GMT
+< Location: https://github.com/maslick
+< Cache-Control: max-age=3600
+...
 ```
