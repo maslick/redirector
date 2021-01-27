@@ -29,3 +29,7 @@ $ curl -vs https://maslick.tech 1> /dev/null
 < Cache-Control: max-age=3600
 ...
 ```
+
+* https://maslick.tech/qa
+* https://maslick.tech/cv
+* https://maslick.tech
