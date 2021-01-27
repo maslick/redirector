@@ -8,12 +8,12 @@ Simple service for 301/302 redirects
 
 ## :clapper: Installation
 ```
-sls deploy --verbose
+$ sls deploy --verbose
 ```
 
 ## :cookie: Usage
 ```
-curl -vs https://maslick.tech 1> /dev/null
+$ curl -vs https://maslick.tech 1> /dev/null
 ...
 > GET / HTTP/1.1
 > Host: maslick.tech
