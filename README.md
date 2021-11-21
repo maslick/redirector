@@ -8,6 +8,7 @@ Blazing fast 301/302 redirects
 
 ## :clapper: Installation
 ```
+$ npm install -g serverless
 $ sls deploy --verbose
 ```
 
